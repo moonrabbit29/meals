@@ -31,7 +31,7 @@ class CategoryItem extends StatelessWidget {
   void selectCategory(BuildContext context)
   {
     Navigator.of(context).pushNamed(
-      '/category-meals',arguments: {'id':id,'title': title,'color':color}
+      '/category-meals',arguments: {'id':id,'title': title}
     );
   }
 
@@ -40,7 +40,6 @@ class CategoryItem extends StatelessWidget {
     final routeArgs = ModalRoute.of(context).settings.arguments as Map<String,String>;
     final categoryTitle = routeArgs['title'];
     final categoryId = routeArgs['id'];
-    final categoryColor = routeArgs['color'];
     return InkWell(
           onTap: (){selectCategory(context);},
           splashColor: Theme.of(context).primaryColor,

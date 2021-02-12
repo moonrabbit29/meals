@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 class CategoryMealsScreen extends StatelessWidget {
   final String id;
   final String title;
-  final Color color;
 
-  const CategoryMealsScreen({this.title, this.id, this.color});
+  const CategoryMealsScreen({this.title, this.id});
 
   @override
   Widget build(BuildContext context) {
