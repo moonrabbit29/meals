@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mealsapp/screen/categories_screen.dart';
 import 'package:mealsapp/screen/category_meals_screen.dart';
+import 'package:mealsapp/screen/meal_detail_screen.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +25,10 @@ class MyApp extends StatelessWidget {
       home : CatergoriesScreen(),
       routes: {
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen()
+      },
+      onGenerateRoute: (settings){
+        return MaterialPageRoute()
       },
     );
   }
